@@ -18,6 +18,7 @@ public class Controller {
         // 로컬 디비 호출하기. 응원이나 잔소리 1번당 DB 호출 3번을 필요로 한다.
         //1초 이내의 짧은 순간에 1000개의 요청이 몰렸다고 가정하자.
         //총 3000번의 DB 입출력이 필요하다.
+
         long start = System.currentTimeMillis();
         for(int i=1; i<=3000; i++){
             asyncService.saveAtDataBase("user", "e1@mail.com");

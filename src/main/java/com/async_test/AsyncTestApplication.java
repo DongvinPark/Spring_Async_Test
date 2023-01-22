@@ -16,15 +16,4 @@ public class AsyncTestApplication {
         SpringApplication.run(AsyncTestApplication.class, args);
     }
 
-    @Bean
-    public Executor taskExecutor(){
-        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setCorePoolSize(15);
-        executor.setMaxPoolSize(15);
-        executor.setQueueCapacity(10000);
-        executor.setThreadNamePrefix("GithubLookup-");
-        executor.initialize();
-        return executor;
-    }
-
 }

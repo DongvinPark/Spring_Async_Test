@@ -18,7 +18,7 @@ public class AsyncService {
     private final UserRepository userRepository;
 
 
-    //@Async
+    @Async
     @Transactional
     public void saveAtDataBase(String name, String email) {
 
