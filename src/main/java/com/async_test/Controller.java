@@ -20,8 +20,9 @@ public class Controller {
         //총 3000번의 DB 입출력이 필요하다.
 
         long start = System.currentTimeMillis();
-        for(int i=1; i<=3000; i++){
-            asyncService.saveAtDataBase("user", "e1@mail.com");
+        for(int i=1; i<=1500; i++){
+            asyncService.saveUser("user", "e1@mail.com");
+            asyncService.saveNote("John", "0x12AB4");
         }
         // 모든 작업이 끝날 때까지 기다리지 않는다.
         //CompletableFuture.allOf(page1, page2, page3).join();
