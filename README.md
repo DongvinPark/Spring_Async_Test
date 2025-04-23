@@ -16,7 +16,7 @@
 ![82AC91D1-E546-4BC8-939B-E393966D9FC7](https://user-images.githubusercontent.com/99060708/213896497-5b419a30-dd88-4a14-81e1-cc6f774d2d47.jpeg)
 
 ## 테스트 결과 이미지
-- 비동기 테스트 이미지(2023/1/21에 실시 - 좌측 하단에서 시간 확인 가능)
+- 비동기 테스트 이미지(2025/4/23에 실시 - 좌측 하단에서 시간 확인 가능)
 <img width="1596" alt="Image" src="https://github.com/user-attachments/assets/d22b3362-8ac6-414b-9376-fe13f9b53cda" />
 
 - 동기 테스트 이미지(2025/4/23에 실시 - 좌측 하단에서 시간 확인 가능)
