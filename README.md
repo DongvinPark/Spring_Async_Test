@@ -1,9 +1,9 @@
 # 스프링 부트 @Async를 이용한 비동기처리 예제 프로젝트
 
 ## 테스트 내용 요약
-- 2021 M1 맥북에어에서 로컬 마리아 DB를 사용했고, Runtime.getRuntime().availableProcessors() 명령어로 알아낸 가용 프로세서 개수는 8개였습니다.
-- 스레드풀 개수 15개, 최대 스레드풀 개수 15개, 큐 길이 1만으로 셋팅한 결과, 3000 번의 DB 입력 요청을 @Async로 처리하는 것에 16~30밀리초가 걸렸습니다.
-- 같은 조건에서 @Async없이 작업하면 5400밀리초가 걸립니다.
+- 2022 M1 Ultra 맥 스튜디오에서 로컬 마리아 DB를 사용했고, Runtime.getRuntime().availableProcessors() 명령어로 알아낸 가용 프로세서 개수는 20개였습니다.
+- 스레드풀 개수 20개, 최대 스레드풀 개수 20개, 큐 길이 10,050으로 셋팅한 결과, 3000 번의 DB 입력 요청을 @Async로 처리하는 것에 250~290밀리초가 걸렸습니다.
+- 같은 조건에서 @Async없이 작업하면 약 1900~2000 밀리초가 걸립니다.
 - 스프링 프로젝트에서 @Async를 사용하기 위해서는 부트 앱의 메인 메서드에서 @EnableAsync를 붙여줘야 합니다.
 - @Async가 붙은 메서드의 리턴 타입이 void일 경우, 본 리포지토리의 config 패키지의 내용을 참고하여 커스텀 예외 핸들러를 구현해야 합니다. 본 리포지토리에서 테스트 해본 결과 예외를 잘 잡아냈습니다.
 - @Async 메서드의 예외처리에 대한 자세한 내용은 [Baeldung의 관련 포스팅](https://www.baeldung.com/spring-async)을 참고하시면 됩니다.
@@ -17,7 +17,7 @@
 
 ## 테스트 결과 이미지
 - 비동기 테스트 이미지(2023/1/21에 실시 - 좌측 하단에서 시간 확인 가능)
-![0664D098-C1F1-4A35-B69C-5A6A79206884](https://user-images.githubusercontent.com/99060708/213863185-921a43c0-4d0a-4bd7-8c84-793866b53674.jpeg)
+<img width="1596" alt="Image" src="https://github.com/user-attachments/assets/d22b3362-8ac6-414b-9376-fe13f9b53cda" />
 
-- 동기 테스트 이미지(2023/1/21에 실시 - 좌측 하단에서 시간 확인 가능)
-![23E6BE8E-DA15-4CB3-8040-D7962A688B21](https://user-images.githubusercontent.com/99060708/213863129-e1960bd0-28e2-49b1-9d67-0d9990974a51.jpeg)
+- 동기 테스트 이미지(2025/4/23에 실시 - 좌측 하단에서 시간 확인 가능)
+<img width="1588" alt="Image" src="https://github.com/user-attachments/assets/bc0120a8-befc-4a28-a510-31301a54a831" />

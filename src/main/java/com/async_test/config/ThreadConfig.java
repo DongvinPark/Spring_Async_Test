@@ -16,9 +16,10 @@ public class ThreadConfig extends AsyncConfigurerSupport {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
 
         int n = Runtime.getRuntime().availableProcessors();
+        System.out.println("Available processors: " + n);
 
-        executor.setCorePoolSize(2*n);
-        executor.setMaxPoolSize(2*n);
+        executor.setCorePoolSize(n);
+        executor.setMaxPoolSize(n);
         executor.setQueueCapacity(numberOfExpectedMaxDbIoRequest*3);
         executor.setThreadNamePrefix("GithubLookup-");
         executor.initialize();
